@@ -1,0 +1,15 @@
+server:
+  port: 9999
+
+spring:
+  datasource:
+    username: root
+    password: 20021220
+    url: jdbc:mysql:///xdb
+  redis:
+    port:6379
+    host:localhost
+
+logging:
+  level:
+    com.testg: debug
