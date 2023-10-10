@@ -11,6 +11,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 import javax.annotation.Resource;
 
+//全局返回值拦截响应器
 @RestControllerAdvice(basePackages = "com.testg")
 public class ResponseAdvice implements ResponseBodyAdvice {
 

@@ -1,8 +1,11 @@
 package com.testg.system.service;
 
-import com.testg.system.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.testg.system.entity.User;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
@@ -15,9 +18,10 @@ import java.util.Map;
  */
 public interface IUserService extends IService<User> {
 
-    Map<String, Object> login(User user);
+    Map<String, Object> login(User user, HttpSession session, HttpServletRequest request, HttpServletResponse response);
 
-    Map<String, Object> getUserInfo(String token);
+    Map<String, Object> getUserInfo(HttpServletRequest req, HttpServletResponse resp);
 
-    void logout(String token);
+    void logout(HttpSession session, HttpServletRequest request, HttpServletResponse response);
+
 }
